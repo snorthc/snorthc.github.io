@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Help Center · Astrala</title>
+<meta name="description" content="Guides for Astrala: setup, recovery phrase, Tor and Mullvad routing, kill switch, duress PIN, swaps, Monero and backups.">
+<meta name="theme-color" content="#030207">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/site.css?v=1793546544"><link rel="stylesheet" href="/css/pages.css?v=1793546544">
+<script type="module" src="/js/page.js?v=1793546544"></script>
+</head>
+<body class="p-help">
+<main>
+  <section class="page-hero">
+    <img class="page-glow" src="/img/blackhole.webp" alt="" aria-hidden="true" width="1554" height="453">
+    <div class="wrap">
+      <h1 class="display d-xl">Help</h1>
+      <p class="lede" data-reveal style="--d:200ms">Setting up, staying private, and getting your coins back if something goes wrong.</p>
+      <div class="search" data-reveal style="--d:320ms">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="help-q" type="search" placeholder="Search guides: Tor, recovery, duress…" autocomplete="off" aria-label="Search guides">
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-bottom:clamp(60px,8vw,100px)">
+    <div class="wrap cats">
+      <a class="cat-card" href="#start" data-reveal><span class="cnt">4 guides</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2 4 7v10l8 5 8-5V7z"/><path d="M12 22V12M4 7l8 5 8-5"/></svg></div><h3>Getting started</h3><p>Install, name your wallet, back up, receive.</p></a>
+      <a class="cat-card" href="#route" data-reveal style="--d:70ms"><span class="cnt">3 guides</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="6" r="2"/><circle cx="19" cy="12" r="2"/><path d="M7 11l3-4M14 7l3 4"/></svg></div><h3>Tor, Mullvad &amp; proxy</h3><p>Route every request, and the kill switch.</p></a>
+      <a class="cat-card" href="#security" data-reveal style="--d:140ms"><span class="cnt">4 guides</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z"/></svg></div><h3>Security &amp; opsec</h3><p>PIN, duress, stealth, screen protection.</p></a>
+      <a class="cat-card" href="#swaps" data-reveal><span class="cnt">2 guides</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg></div><h3>Swaps &amp; coins</h3><p>Swapping, fees, adding tokens.</p></a>
+      <a class="cat-card" href="#monero" data-reveal style="--d:70ms"><span class="cnt">2 guides</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M7 15V9l5 5 5-5v6"/></svg></div><h3>Monero</h3><p>Local scanning and your own node.</p></a>
+      <a class="cat-card" href="#backup" data-reveal style="--d:140ms"><span class="cnt">3 guides</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></div><h3>Backup &amp; recovery</h3><p>Phrase, encrypted files, shares.</p></a>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <p class="dim" id="no-results" hidden style="text-align:center;margin-bottom:40px">Nothing matches that. Try the <a href="/faq.html" style="color:var(--gold)">FAQ</a>.</p>
+
+      <div class="guide-group" id="start">
+        <div class="gg-title"><h2>Getting started</h2></div>
+        <div class="acc">
+          <details class="guide" id="install"><summary>Install Astrala on your Mac<span class="pm"></span></summary><div class="body">
+            <ol><li>Download the <b>.dmg</b> from the <a href="/download.html" style="color:var(--gold)">download page</a>, never from anywhere else.</li><li>Check its SHA-256 fingerprint against the release (the download page shows you how).</li><li>Open the .dmg and drag <b>Astrala Wallet</b> into Applications.</li><li>Open it. If macOS asks whether you're sure, choose <b>Open</b>.</li></ol>
+            <div class="tip">Astrala only ever comes from its official download page. Anyone sending you a "special version" in a DM is trying to steal from you.</div></div></details>
+          <details class="guide" id="create"><summary>Create a wallet: name and password<span class="pm"></span></summary><div class="body">
+            <p>Choose <b>Create a new wallet</b>, give it a name (it's only a label, shown on your portfolio, and you can rename it any time), pick the currency you think in, then set a password of at least 10 characters.</p>
+            <p>The password encrypts your recovery phrase on this Mac with Argon2id and AES-256. There is no "forgot password": nobody, including us, has a copy to reset. If you forget it, you restore from your recovery phrase.</p></div></details>
+          <details class="guide" id="phrase"><summary>Back up your 24-word recovery phrase<span class="pm"></span></summary><div class="body">
+            <p>Astrala shows you 24 words, then asks you to confirm a few of them. Those words <b>are</b> your wallet: anyone who has them can take everything, on any device.</p>
+            <ul><li>Write them on paper, in order. Keep the paper somewhere safe and offline.</li><li>Never screenshot them, type them into a website, or store them in cloud notes or a password manager you sync.</li><li>Astrala blocks screenshots of sensitive screens, but the habit is yours.</li></ul>
+            <div class="warn">No one from Astrala will ever ask for your recovery phrase. Not support, not "verification", not ever.</div></div></details>
+          <details class="guide" id="receive"><summary>Receive your first payment<span class="pm"></span></summary><div class="body">
+            <p>Open <b>Receive</b>, choose the coin and network, and share the address or QR code. Always match the network: sending USDT on Tron to an Ethereum address will not arrive.</p>
+            <p>The moment the payment is broadcast, Astrala shows it <b>in flight</b> on your Activity screen with an estimate of when it lands, then marks it received once it confirms. Start with a small amount the first time.</p></div></details>
+        </div>
+      </div>
+
+      <div class="guide-group" id="route">
+        <div class="gg-title"><h2>Tor, Mullvad &amp; proxy</h2></div>
+        <div class="acc">
+          <details class="guide" id="tor"><summary>Route everything through Tor<span class="pm"></span></summary><div class="body">
+            <p>Open <b>Privacy &amp; route</b> (or Settings → <b>Astral Route</b>) and choose <b>Tor</b>. The first time, Astrala downloads the official Tor binary from the Tor Project and checks its SHA-256 fingerprint; if it doesn't match, it's thrown away.</p>
+            <p>From then on every request (balances, prices, swap quotes and broadcasts) goes through three Tor relays. The nodes you talk to see a Tor exit relay, never your IP address. Tor is slower than a direct connection; that's the price of the privacy.</p></div></details>
+          <details class="guide" id="mullvad"><summary>Use your Mullvad tunnel<span class="pm"></span></summary><div class="body">
+            <p>If you use Mullvad VPN, install and sign in to the Mullvad app as usual. In Astral Route choose <b>Mullvad</b>: Astrala connects through it, lets you <b>change location</b>, and has <b>Verify with am.i.mullvad.net</b> so you can confirm traffic really leaves through Mullvad.</p>
+            <p>Prefer something else? Choose <b>Proxy</b> and enter any SOCKS5 proxy, such as your own server.</p></div></details>
+          <details class="guide" id="killswitch"><summary>How the kill switch protects you<span class="pm"></span></summary><div class="body">
+            <p>With the kill switch on (it is by default), if Tor, Mullvad or your proxy drops, Astrala <b>holds every request</b> until the route is back. Nothing falls back to your real connection in the gap, not even a balance check.</p></div></details>
+        </div>
+      </div>
+
+      <div class="guide-group" id="security">
+        <div class="gg-title"><h2>Security &amp; opsec</h2></div>
+        <div class="acc">
+          <details class="guide" id="pin"><summary>Payment PIN and daily spending limit<span class="pm"></span></summary><div class="body">
+            <p>Set a <b>payment PIN</b> in Settings → Security. Every send and swap then needs it, bound to that exact payment. Too many wrong attempts and Astrala blocks payments for a while.</p>
+            <p>A <b>daily spending limit</b> caps how much can leave the wallet in any rolling 24 hours. Changing it needs your PIN, so a stranger at your unlocked Mac can't raise it.</p></div></details>
+          <details class="guide" id="duress"><summary>Set up a duress PIN<span class="pm"></span></summary><div class="body">
+            <p>A duress PIN is for the moment someone forces you to open your wallet. On the lock screen you type the duress PIN instead of your password: Astrala opens an <b>empty decoy wallet</b>, and every coin quietly sweeps to a <b>Vault phrase</b> that only you have, on paper.</p>
+            <ol><li>Settings → Security → <b>Duress PIN</b> → Set up.</li><li>Write down the Vault phrase Astrala gives you and store it apart from your main phrase.</li><li>Choose a PIN you'll remember under stress.</li></ol>
+            <div class="warn">Sweeping is a real on-chain transfer and pays normal network fees. Keep the Vault phrase safe: it's where your coins go.</div></div></details>
+          <details class="guide" id="stealth"><summary>Stealth mode, blur when unfocused, screen protection<span class="pm"></span></summary><div class="body">
+            <ul><li><b>Stealth mode</b>: press <span class="kbd">⌘</span> <span class="kbd">⇧</span> <span class="kbd">H</span> anywhere to blur every balance and amount.</li><li><b>Blur when unfocused</b>: balances blur the moment you switch to another app.</li><li><b>Screen protection</b>: Astrala shows up black in screenshots, recordings and screen sharing. Turn it off when you want to share your screen.</li><li><b>Clear copied addresses</b>: wipes the clipboard a set time after you copy an address.</li></ul></div></details>
+          <details class="guide" id="poison"><summary>Address-poisoning warnings<span class="pm"></span></summary><div class="body">
+            <p>Attackers create an address that starts and ends like one you use, then send you a tiny payment so it sits in your history, hoping you'll copy it next time. Astrala compares every address you paste against your contacts and history and warns you when one only <b>looks</b> familiar.</p>
+            <p>Save the addresses you pay often in the <b>Address book</b>; they then show by name when you send.</p></div></details>
+        </div>
+      </div>
+
+      <div class="guide-group" id="swaps">
+        <div class="gg-title"><h2>Swaps &amp; coins</h2></div>
+        <div class="acc">
+          <details class="guide" id="swap"><summary>Swap one coin for another<span class="pm"></span></summary><div class="body">
+            <p>Open <b>Swap</b>, pick what you pay and what you receive, and enter an amount. Astrala asks every decentralized route at once (Jupiter, KyberSwap, ParaSwap, THORChain, Maya, LI.FI and NEAR Intents) and shows the cheapest first, with the rate, the minimum you'll get, the network fee and the arrival time.</p>
+            <p>Nothing moves until you review it and enter your PIN. The swap is signed on your Mac and goes straight to the protocol: no exchange account, no KYC, no custody.</p>
+            <div class="tip">When swapping a token on Ethereum or similar chains, Astrala approves only the exact amount of the swap, never unlimited, and resets any old approval first.</div></div></details>
+          <details class="guide" id="addcoin"><summary>Add any coin or token<span class="pm"></span></summary><div class="body">
+            <p>Choose <b>Add a coin</b>, search by name or paste a contract address. Verified tokens are marked; anything else shows a warning so you know to double-check the contract. Added tokens join your solar system like any other planet.</p></div></details>
+        </div>
+      </div>
+
+      <div class="guide-group" id="monero">
+        <div class="gg-title"><h2>Monero</h2></div>
+        <div class="acc">
+          <details class="guide" id="xmr"><summary>How Monero works in Astrala<span class="pm"></span></summary><div class="body">
+            <p>Your Monero keys never leave your Mac. Astrala downloads blocks from a node and scans them <b>locally</b>; the node only serves blocks and never learns which outputs are yours. The first sync takes a while; after that it keeps up in the background.</p></div></details>
+          <details class="guide" id="node"><summary>Use your own Monero node, or rescan<span class="pm"></span></summary><div class="body">
+            <p>Settings → Monero → <b>Your own node</b>: enter your node's address (for example one running at home) for maximum privacy, or leave it empty to rotate between public nodes.</p>
+            <p>If a balance ever looks wrong, <b>Rescan</b> clears the local Monero cache and scans again from when the wallet was created.</p></div></details>
+        </div>
+      </div>
+
+      <div class="guide-group" id="backup">
+        <div class="gg-title"><h2>Backup &amp; recovery</h2></div>
+        <div class="acc">
+          <details class="guide" id="restore"><summary>Restore from your recovery phrase<span class="pm"></span></summary><div class="body">
+            <p>On a new Mac, install Astrala and choose <b>Restore with a recovery phrase</b>. Enter your 24 words and, if you know it, roughly when the wallet was created (it speeds up the Monero scan). Your coins live on the blockchain, not on your Mac, so they all come back.</p></div></details>
+          <details class="guide" id="files"><summary>Encrypted file backups and shares<span class="pm"></span></summary><div class="body">
+            <p>Settings → Security → <b>Backups</b> offers two extra safety nets:</p>
+            <ul><li><b>File</b>: one encrypted file with everything (phrase, names, pictures, contacts, alerts). It needs a password to open.</li><li><b>Shares</b>: your phrase split into 3 shares, where any 2 restore it. Keep them in different places, and no single share reveals anything on its own.</li></ul></div></details>
+          <details class="guide" id="forgot"><summary>I forgot my password<span class="pm"></span></summary><div class="body">
+            <p>There's no reset: your password protects the phrase on this Mac, and no copy exists anywhere else. Restore the wallet from your 24-word phrase (or your backup file or shares) and set a new password.</p></div></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta-band glass" data-reveal="scale">
+        <h2 class="display d-m">Still stuck?</h2>
+        <p class="lede">Ask the community, or report a security issue privately on GitHub. Remember: we never DM first and never ask for your phrase.</p>
+        <div class="row"><a class="btn btn-gold" href="/faq.html">Read the FAQ</a><a class="btn btn-ghost" href="#" data-source>Report an issue</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer data-footer></footer>
+</body>
+</html>

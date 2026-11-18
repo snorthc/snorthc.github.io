@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Privacy · Astrala</title>
+<meta name="description" content="How Astrala handles your data: no account, no tracking, self-custody. Keys stay encrypted on your device.">
+<meta name="theme-color" content="#030207">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/site.css?v=1793546544"><link rel="stylesheet" href="/css/pages.css?v=1793546544">
+<script type="module" src="/js/page.js?v=1793546544"></script>
+</head>
+<body class="p-privacy">
+<main>
+  <section class="page-hero">
+    <img class="page-glow" src="/img/blackhole.webp" alt="" aria-hidden="true" width="1554" height="453">
+    <div class="wrap">
+      <h1 class="display d-xl">Privacy</h1>
+      <p class="lede" data-reveal style="--d:200ms">No account. No tracking. Your keys and your wallet stay on your device.</p>
+      <p class="dim" style="margin-top:10px;font-size:14px">Last updated 13 November 2026</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap legal">
+      <h2 class="d-m">The short version</h2>
+      <p>Astrala is a self-custody wallet. You don't make an account with us, and we don't run a server that holds your data. Your recovery phrase, private keys, wallet and settings are created and stored on your own device, encrypted with a password only you know. We can't see them, and we can't recover them for you.</p>
+
+      <h2 class="d-m">What Astrala collects about you</h2>
+      <p>Nothing is sent to Astrala. There is no sign-up, no email, no analytics or tracking in the wallet, and no profile of you anywhere. The wallet works offline except for the blockchain requests described below.</p>
+
+      <h2 class="d-m">What stays on your device</h2>
+      <ul>
+        <li>Your recovery phrase and private keys, encrypted (Argon2id + AES-256-GCM) with your password.</li>
+        <li>Your wallet contents, account names, address book and preferences.</li>
+        <li>Your PIN, kept only as a value used to check the PIN, never in the clear.</li>
+      </ul>
+      <p>In the desktop app these live in the app's own storage. In the browser extension's standalone wallet mode (beta), they live encrypted in that browser's local storage. Clearing the browser's data, or losing the device, means restoring from your recovery phrase &mdash; which is why you keep it written down and offline.</p>
+
+      <h2 class="d-m">What other parties can see</h2>
+      <p>To show balances and send payments, Astrala talks to public blockchain nodes and block explorers. Those services necessarily see the network request: the wallet addresses you ask about and the IP address the request comes from. That is how every blockchain wallet works, and it is <em>not</em> anonymity &mdash; an address and an IP can be linked by whoever you connect to.</p>
+      <p>The desktop app can route this traffic through Tor or Mullvad to hide your IP from those nodes (it does not hide the blockchain addresses themselves, which are public by nature). Prices and network data come from public providers, reached through the same route. Astrala adds no identifying headers of its own.</p>
+
+      <h2 class="d-m">The browser extension and websites</h2>
+      <p>With the Astrala desktop app installed, the extension is a remote for the app, and can place an Astrala connector on web pages so a website (a dApp) can ask to connect to your wallet. A site only ever receives what you explicitly approve; it cannot read your keys, and it cannot move funds without your PIN. The extension reads page content only to offer this connection and to show its own on-screen security warnings &mdash; it does not collect or transmit the pages you visit.</p>
+
+      <h2 class="d-m">No remote code, no third-party trackers</h2>
+      <p>All of Astrala's code ships inside the app and the extension package. Nothing is downloaded and run at runtime. There are no advertising or analytics SDKs.</p>
+
+      <h2 class="d-m">Children</h2>
+      <p>Astrala is not directed at children and is intended for adults managing their own funds.</p>
+
+      <h2 class="d-m">Changes</h2>
+      <p>If this policy changes, the date above changes with it. Material changes will be noted on this page.</p>
+
+      <h2 class="d-m">Contact</h2>
+      <p>Questions about privacy can reach us through the community links on the Astrala website.</p>
+    </div>
+  </section>
+</main>
+<footer data-footer></footer>
+</body>
+</html>

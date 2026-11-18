@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>FAQ · Astrala</title>
+<meta name="description" content="Answers about Astrala: is it safe, is it free, how Tor and Mullvad routing work, swaps without KYC, Monero, and how to verify the download.">
+<meta name="theme-color" content="#030207">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/site.css?v=1793546544"><link rel="stylesheet" href="/css/pages.css?v=1793546544">
+<script type="module" src="/js/page.js?v=1793546544"></script>
+</head>
+<body class="p-faq">
+<main>
+  <section class="page-hero">
+    <img class="page-glow" src="/img/blackhole.webp" alt="" aria-hidden="true" width="1554" height="453">
+    <div class="wrap">
+      <h1 class="display d-xl">Frequently asked questions</h1>
+      <p class="lede" data-reveal style="--d:200ms">Safety, cost, privacy, swaps and how to check a download.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:clamp(20px,4vw,50px)">
+    <div class="wrap">
+      <div class="faq-group">
+        <span class="eyebrow" data-reveal>The basics</span>
+        <div class="acc">
+          <details id="scam" data-reveal><summary>How do I know you won't drain my wallet?<span class="pm"></span></summary><div class="body">
+            <p>You should ask that of every wallet. Astrala is self-custody: your keys are created on your Mac and never leave it. The code that holds them and makes every network request is public; you can build it yourself and check it matches the app you downloaded, byte for byte.</p>
+            <p>There's no telemetry and nothing phones home: watch the traffic with a free tool like LuLu and you'll only see public blockchain nodes and price feeds. The interface runs in a sandbox the public code controls: no internet, no disk, no keys. And we will never DM you or ask for your recovery phrase.</p></div></details>
+          <details data-reveal><summary>Is Astrala really free?<span class="pm"></span></summary><div class="body">
+            <p>Yes. Downloading and using Astrala is free, with no subscription and no account. Sending pays the blockchain's own network fee, which goes to the network, not to us. Astrala only charges when you trade: 0.5% on a swap, 2% on a route (a chain of swaps through one-time wallets) and 15% on a split. The fee is shown on the review screen before you confirm and goes out as its own on-chain transfer. Sends never carry an Astrala fee.</p></div></details>
+          <details data-reveal><summary>What does "self-custody" mean?<span class="pm"></span></summary><div class="body">
+            <p>Only you hold the keys. There's no company account, no password reset, and no support team that can move your coins. Your 24-word recovery phrase is the master key: keep it on paper, offline, and never share it. If you lose both the phrase and your Mac, the coins are gone; that's the trade-off for nobody else being able to touch them.</p></div></details>
+          <details data-reveal><summary>Which coins and networks work?<span class="pm"></span></summary><div class="body">
+            <p>Thirteen networks today: Bitcoin, Ethereum, Solana, Litecoin, Monero, Tron and Dogecoin, plus Arbitrum, Base, Optimism, Polygon, BNB Chain and Avalanche with their tokens. You can add any token by contract. Ledger and Trezor support are on the way.</p></div></details>
+          <details id="extension" data-reveal><summary>Can I use Astrala without the Mac app?<span class="pm"></span></summary><div class="body">
+            <p>Yes. The Astrala browser extension for Chrome, Edge and Brave can be a wallet on its own, in beta: you create or import a wallet in the browser, and the keys are stored encrypted in that browser. It covers Bitcoin, Ethereum and its networks, Solana and Litecoin; Monero, routing through Tor or Mullvad, hardware wallets, the duress PIN and Touch ID are only in the app. Get it on the <a href="/download.html#extension">download page</a>.</p></div></details>
+        </div>
+      </div>
+
+      <div class="faq-group">
+        <span class="eyebrow" data-reveal>Privacy &amp; routing</span>
+        <div class="acc">
+          <details data-reveal><summary>How do Tor, Mullvad and proxy routing work?<span class="pm"></span></summary><div class="body">
+            <p>In Privacy &amp; route you pick how Astrala reaches the network: Direct, Tor, your Mullvad tunnel, or your own SOCKS5 proxy. Every request (balances, prices, swap quotes, broadcasts) then leaves through that route, so the nodes you talk to see the exit, never your IP address.</p></div></details>
+          <details data-reveal><summary>What happens if the tunnel drops?<span class="pm"></span></summary><div class="body">
+            <p>With the kill switch on (the default), Astrala holds every request until the route is back. Nothing falls back to your real connection, not even a balance check.</p></div></details>
+          <details data-reveal><summary>Does Astrala collect any data?<span class="pm"></span></summary><div class="body">
+            <p>The app: no. No analytics, no crash reports, no auto-updater, no accounts. We can't see your balance, your addresses or how you use it, because none of it leaves your Mac. This website counts page views and downloads, with no cookies, no IP addresses and no third-party trackers.</p></div></details>
+          <details data-reveal><summary>What's a duress PIN?<span class="pm"></span></summary><div class="body">
+            <p>A second code for the lock screen, for when someone forces you to open your wallet. It opens an empty-looking decoy while your coins sweep to a Vault phrase only you hold on paper. See the <a href="/help.html#duress" style="color:var(--gold)">setup guide</a>.</p></div></details>
+          <details data-reveal><summary>Is device fingerprint spoofing available?<span class="pm"></span></summary><div class="body">
+            <p>Not yet; it's coming in a future release. Tor, Mullvad, proxy routing and the kill switch are available today.</p></div></details>
+        </div>
+      </div>
+
+      <div class="faq-group">
+        <span class="eyebrow" data-reveal>Swaps &amp; Monero</span>
+        <div class="acc">
+          <details data-reveal><summary>How do swaps work without an exchange?<span class="pm"></span></summary><div class="body">
+            <p>Astrala asks decentralized protocols directly (Jupiter, KyberSwap, ParaSwap, THORChain, Maya, LI.FI on-chain bridges, and NEAR Intents) and shows the cheapest route. The swap is signed on your Mac and goes straight to that protocol. No exchange account, no KYC, no custody.</p></div></details>
+          <details data-reveal><summary>Why is there no KYC?<span class="pm"></span></summary><div class="body">
+            <p>Astrala never holds your coins, so there's nothing to gatekeep. You're using public blockchains and decentralized protocols directly, the same as running your own node.</p></div></details>
+          <details data-reveal><summary>How is Monero handled?<span class="pm"></span></summary><div class="body">
+            <p>Your keys scan the chain locally; the node only serves blocks and never sees your keys. You can rotate public nodes or use your own. Swapping out of Monero trustlessly is still maturing across the industry; we'll always say plainly what's possible.</p></div></details>
+        </div>
+      </div>
+
+      <div class="faq-group">
+        <span class="eyebrow" data-reveal>Trust &amp; verification</span>
+        <div class="acc">
+          <details id="verify" data-reveal><summary>How do I check my download is genuine?<span class="pm"></span></summary><div class="body">
+            <p>Every release publishes a SHA-256 fingerprint. Run <code>shasum -a 256 ~/Downloads/Astrala-Wallet.dmg</code> and compare it with the one on the <a href="/download.html#verify" style="color:var(--gold)">download page</a>. If it doesn't match, delete it. You can go further and rebuild the engine to compare it with the app itself.</p></div></details>
+          <details data-reveal><summary>Is Astrala open source?<span class="pm"></span></summary><div class="body">
+            <p>The engine, everything that touches your keys, your money and the network, is published so anyone can read and verify it. The visual design is kept private so it can't be cloned into convincing fake copies. The public code locks the interface in a sandbox with no network, no disk and no keys, which you can confirm yourself.</p></div></details>
+          <details data-reveal><summary>What if I lose my Mac?<span class="pm"></span></summary><div class="body">
+            <p>Install Astrala on another Mac and restore from your 24-word phrase. Your coins live on the blockchain, not on the device, so they all come back.</p></div></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta-band glass" data-reveal="scale">
+        <h2 class="display d-m">Download Astrala</h2>
+        <p class="lede">Free for macOS 12 or later.</p>
+        <div class="row"><a class="btn btn-gold btn-lg" href="/download.html">Download Astrala</a><a class="btn btn-ghost btn-lg" href="/help.html">Help Center</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer data-footer></footer>
+</body>
+</html>

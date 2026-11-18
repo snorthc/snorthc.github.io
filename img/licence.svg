@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 330"><defs><linearGradient id="lc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6e7cf"/><stop offset="1" stop-color="#d9c4a2"/></linearGradient></defs>
+<rect width="520" height="330" rx="26" fill="url(#lc)"/><rect width="520" height="62" rx="26" fill="#b98d55"/><rect y="40" width="520" height="22" fill="#b98d55"/>
+<text x="28" y="42" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="24" fill="#fff8ec" letter-spacing="3">DRIVING LICENCE</text>
+<rect x="28" y="88" width="150" height="190" rx="14" fill="#c9b08c"/><circle cx="103" cy="160" r="38" fill="#a88b64"/><path d="M45 270 Q103 190 161 270Z" fill="#a88b64"/>
+<rect x="208" y="100" width="240" height="12" rx="6" fill="#a88b64" opacity=".9"/><rect x="208" y="130" width="200" height="12" rx="6" fill="#a88b64" opacity=".55"/><rect x="208" y="160" width="260" height="12" rx="6" fill="#a88b64" opacity=".55"/><rect x="208" y="190" width="170" height="12" rx="6" fill="#a88b64" opacity=".55"/><rect x="208" y="220" width="230" height="12" rx="6" fill="#a88b64" opacity=".55"/><rect x="208" y="250" width="150" height="12" rx="6" fill="#a88b64" opacity=".55"/>
+<rect x="208" y="286" width="284" height="18" rx="4" fill="#8b6c45" opacity=".45"/></svg>

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Download Astrala for Mac · Free</title>
+<meta name="description" content="Download Astrala for macOS. Free, self-custody, no account. Check the SHA-256 before you open it.">
+<meta name="theme-color" content="#030207">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/site.css?v=1793546544"><link rel="stylesheet" href="/css/pages.css?v=1793546544">
+<script type="module" src="/js/page.js?v=1793546544"></script>
+</head>
+<body class="p-download">
+<main>
+  <section class="page-hero">
+    <img class="page-glow" src="/img/blackhole.webp" alt="" aria-hidden="true" width="1554" height="453">
+    <div class="wrap">
+      <h1 class="display d-xl">Download Astrala for Mac</h1>
+      <p class="lede" data-reveal style="--d:200ms">Free for macOS 12 or later, on Apple Silicon and Intel. Start with a fresh wallet and a small amount while it is in beta.</p>
+      <p class="hero-alt">On Windows or Linux? Use the <a class="inl" href="#extension">browser extension</a>.</p>
+    </div>
+  </section>
+
+  <section style="padding-bottom:clamp(60px,9vw,110px)">
+    <div class="wrap">
+      <div class="rel glass" id="rel-card" data-reveal="scale">
+        <div class="rel-top">
+          <div class="rel-os"><svg viewBox="0 0 24 24" fill="#fff"><path d="M16.37 1.43c.09 1.04-.33 2.06-1 2.82-.69.78-1.82 1.38-2.92 1.3-.11-1.01.37-2.06 1-2.74.71-.78 1.94-1.35 2.92-1.38zM20.5 17.1c-.57 1.3-.84 1.88-1.57 3.03-1.02 1.6-2.46 3.6-4.24 3.61-1.58.02-1.99-1.03-4.14-1.02-2.15.01-2.6 1.04-4.18 1.03-1.78-.02-3.14-1.82-4.16-3.42-2.86-4.48-3.16-9.74-1.4-12.54 1.25-1.99 3.23-3.16 5.09-3.16 1.89 0 3.08 1.04 4.65 1.04 1.52 0 2.45-1.04 4.64-1.04 1.65 0 3.4.9 4.65 2.46-4.08 2.24-3.42 8.07.66 10.01z"/></svg></div>
+          <div class="rel-info"><h2 id="rel-name">Astrala for macOS</h2><p class="rel-meta" id="rel-meta">Public beta · Apple Silicon &amp; Intel · macOS 12+</p></div>
+          <a class="btn btn-gold btn-lg" id="rel-btn" href="/download"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg><span>Download .dmg</span></a>
+        </div>
+        <div class="rel-soon">The first public build is on its way. Join the community below and you'll hear the moment it lands.</div>
+        <div class="rel-actions">
+          <button class="btn btn-ghost btn-sm" id="notes-toggle" aria-expanded="false"><span>Release notes</span></button>
+          <a class="btn btn-ghost btn-sm" id="rel-gh" href="#" target="_blank" rel="noopener" hidden>View on GitHub</a>
+          <a class="btn btn-ghost btn-sm" href="#verify">Verify the download</a>
+        </div>
+        <div class="rel-notes" id="rel-notes-wrap"><div><div class="notes" id="rel-notes"><p class="dim">Release notes appear here with each release.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="steps3">
+        <article class="step3" data-reveal><div class="n">01</div><h3 class="d-s">Install and open</h3><p>Drag Astrala into Applications and open it. Name your wallet and set a strong password; it encrypts everything on this Mac.</p></article>
+        <article class="step3" data-reveal style="--d:90ms"><div class="n">02</div><h3 class="d-s">Write down 24 words</h3><p>Your recovery phrase is the master key. Paper only: no screenshots, no cloud notes. It's the one way back in.</p></article>
+        <article class="step3" data-reveal style="--d:180ms"><div class="n">03</div><h3 class="d-s">Receive a little first</h3><p>Send in a small amount and watch it land. Then switch on Tor or Mullvad in Privacy &amp; route whenever you like.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="verify">
+    <div class="wrap verify">
+      <div style="text-align:center">
+        <h2 class="display d-l">Verify your download</h2>
+        <p class="lede" data-reveal style="margin:20px auto 0;text-align:center">Every release publishes a SHA-256 fingerprint. Check it before you open the app. If it doesn't match, delete the file.</p>
+      </div>
+      <div class="cmd" data-reveal>
+        <div class="cmd-head"><span>Terminal</span><button class="copy" id="sha-copy" data-copy="shasum -a 256 ~/Downloads/Astrala-Wallet.dmg">Copy</button></div>
+        <pre id="sha-cmd">shasum -a 256 ~/Downloads/Astrala-Wallet.dmg</pre>
+      </div>
+      <div class="sha-row" id="sha-row" data-reveal><span class="dim" style="font-size:14px">It should print</span><code id="sha">published with each release</code></div>
+      <details class="more" data-reveal>
+        <summary>Go further: rebuild the engine and compare it with the app</summary>
+        <div class="in">
+          <p>The code that holds your keys and makes every network request is public. Build it and its fingerprint matches the engine inside the app you downloaded, byte for byte.</p>
+          <pre>git clone &lt;source repository&gt; &amp;&amp; cd astrala-engine
+npm ci &amp;&amp; npm run build
+shasum -a 256 out/main/index.js out/preload/index.cjs
+
+npx @electron/asar extract "/Applications/Astrala Wallet.app/Contents/Resources/app.asar" /tmp/astrala-app
+shasum -a 256 /tmp/astrala-app/out/main/index.js /tmp/astrala-app/out/preload/index.cjs</pre>
+          <p style="margin-top:12px">Both pairs of fingerprints must be identical.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="section" id="extension">
+    <div class="wrap ext">
+      <div class="ext-head">
+        <h2 class="display d-l">Astrala in your browser</h2>
+        <p class="lede" data-reveal>A Chrome extension that works two ways: as a remote for the Astrala app, or as a wallet on its own.</p>
+      </div>
+      <div class="ext-modes">
+        <article class="ext-card glass" data-reveal>
+          <h3 class="d-s">With the Astrala app</h3>
+          <p>With the app installed, the extension is a remote for the app. Your keys stay in the app.</p>
+          <h4>Only in the app</h4>
+          <ul class="ext-list app">
+            <li>Monero</li>
+            <li>Routing through Tor or Mullvad</li>
+            <li>Hardware wallets</li>
+            <li>The duress PIN</li>
+            <li>Swaps, Split and Route</li>
+            <li>Connecting to websites</li>
+            <li>Touch ID</li>
+          </ul>
+        </article>
+        <article class="ext-card glass" data-reveal style="--d:90ms">
+          <h3 class="d-s">On its own <span class="badge">Beta</span></h3>
+          <p>Without the app, for example on Windows today, the extension can be a wallet by itself. You create or import a wallet in Chrome, and the keys are stored encrypted in that browser.</p>
+          <h4>What it supports</h4>
+          <ul class="ext-list">
+            <li>Bitcoin, Ethereum and its networks, Solana, Litecoin</li>
+            <li>Receive and send</li>
+            <li>A 6-digit PIN on every payment</li>
+          </ul>
+        </article>
+      </div>
+      <div class="ext-get glass" data-reveal>
+        <div class="ext-get-head">
+          <div class="ext-br" id="ext-br" hidden><span class="ext-br-dot"></span><span id="ext-br-name">your browser</span></div>
+          <h3 class="d-s">Get the extension</h3>
+          <p id="ext-detect">Works in Chrome, Edge, Brave, Opera and Vivaldi on Windows, Mac and Linux.</p>
+          <a class="btn btn-gold btn-lg" id="ext-dl" href="/downloads/astrala-extension.zip" download><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg><span>Download the extension (.zip)</span></a>
+          <div class="ext-switch" id="ext-switch" hidden>
+            <span>Not it?</span>
+            <button type="button" data-br="chrome">Chrome</button>
+            <button type="button" data-br="edge">Edge</button>
+            <button type="button" data-br="brave">Brave</button>
+            <button type="button" data-br="firefox">Firefox</button>
+          </div>
+        </div>
+        <div class="ext-setup" id="ext-setup">
+          <ol class="ext-steps">
+            <li>Unzip the download.</li>
+            <li>Open <code>chrome://extensions</code> in Chrome, Edge or Brave.</li>
+            <li>Switch on "Developer mode" (top right).</li>
+            <li>Click "Load unpacked" and choose the unzipped folder.</li>
+          </ol>
+          <p class="ext-note">Installed outside a store, so your browser shows a "developer mode" reminder — that's expected. Free one-click installs are on the way (Edge Add-ons and a signed Firefox build).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band glass" data-reveal="scale">
+        <h2 class="display d-l">Windows and Linux</h2>
+        <p class="lede">On Windows and Linux you can use Astrala today through the <a class="inl" href="#extension">browser extension</a>. The full desktop app for Windows and Linux is on the way.</p>
+        <div class="row f-soc" data-links="icons" style="margin-top:28px"></div>
+        <div class="row"><a class="btn btn-ghost" href="/help.html">Read the setup guide</a><a class="btn btn-ghost" href="/faq.html">Questions? FAQ</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer data-footer></footer>
+</body>
+</html>

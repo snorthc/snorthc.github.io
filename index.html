@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Astrala · The private crypto wallet for Mac</title>
+<meta name="description" content="A free, self-custody crypto wallet for macOS. Your keys never leave your Mac, and every request goes through Tor, Mullvad or your own proxy. No account, no KYC.">
+<meta name="theme-color" content="#030207">
+<meta property="og:title" content="Astrala · The private crypto wallet for Mac">
+<meta property="og:description" content="Self-custody for macOS. Tor, Mullvad and proxy routing built in. No account, no KYC.">
+<meta property="og:image" content="/img/app/portfolio.jpg">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/InterDisplay-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css?v=5">
+<link rel="stylesheet" href="/css/home.css?v=5">
+<script type="module" src="/js/home.js?v=5"></script>
+</head>
+<body class="home">
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <h1 class="display">The private crypto wallet for&nbsp;Mac.</h1>
+      <p class="hero-sub">Astrala keeps your keys on your Mac and can send everything it does through Tor, Mullvad or your own proxy. There is no account to make and no company holding your coins.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold btn-lg" href="/download.html">Download for Mac</a>
+        <a class="link" href="/download.html#verify">How to verify the download</a>
+      </div>
+      <p class="hero-meta">Free · macOS 12 or later · Apple Silicon and Intel · Public beta</p>
+    </div>
+    <figure class="shot hero-shot"><img src="/img/app/portfolio.jpg" width="2400" height="1500" alt="Astrala's portfolio screen: a total balance, with each coin as a planet orbiting a black hole" fetchpriority="high"></figure>
+  </section>
+
+  <section class="rows" id="features">
+    <div class="wrap">
+      <article class="row">
+        <div class="row-text">
+          <h2 class="display">Hide your IP from every service the wallet talks to</h2>
+          <p>Blockchain nodes, price feeds and swap routers normally see your IP next to your addresses. Turn on Tor (built in), your Mullvad tunnel or a proxy, and they see that instead. If the route drops, the kill switch holds requests until it's back.</p>
+          <p>Stealth mode blurs every amount and address with one shortcut. A duress PIN opens a decoy wallet.</p>
+        </div>
+        <figure class="shot"><img src="/img/app/privacy.jpg?v=2" width="2400" height="1500" loading="lazy" alt="Astrala's privacy settings: stealth mode, blur when unfocused, hidden addresses and a duress PIN"></figure>
+      </article>
+      <article class="row flip">
+        <div class="row-text">
+          <h2 class="display">Swap without an exchange account</h2>
+          <p>Each swap is quoted by Jupiter, KyberSwap, ParaSwap, THORChain, Maya, LI.FI and NEAR Intents at the same time. You pick a route and it is signed on your Mac.</p>
+          <p>You can also chain swaps through one-time wallets, or split one coin into several, each going to a new account.</p>
+        </div>
+        <figure class="shot"><img src="/img/app/swap.jpg" width="2400" height="1500" loading="lazy" alt="Astrala's swap screen comparing decentralized routes between two coins"></figure>
+      </article>
+      <article class="row">
+        <div class="row-text">
+          <h2 class="display">Incoming payments show up before they confirm</h2>
+          <p>For Bitcoin, Litecoin, Solana and Monero, money sent to you appears as soon as it's broadcast, with an estimate of when it will land.</p>
+          <p>Sending always goes through a review screen, your PIN, and a system confirmation the app window can't change.</p>
+        </div>
+        <figure class="shot"><img src="/img/app/activity.jpg" width="2400" height="1500" loading="lazy" alt="Astrala's activity screen: money in and out by month, and recent payments"></figure>
+      </article>
+    </div>
+  </section>
+
+  <section class="price" id="pricing">
+    <div class="wrap">
+      <h2 class="display">Pricing</h2>
+      <dl class="price-list">
+        <div><dt>Hold, send, receive</dt><dd class="display">Free</dd><p>You pay the network's own fee. None of it is ours.</p></div>
+        <div><dt>Swap</dt><dd class="display">0.5%</dd><p>One coin to another, on the cheapest route found.</p></div>
+        <div><dt>Route</dt><dd class="display">2%</dd><p>A chain of swaps through one-time wallets.</p></div>
+        <div><dt>Split</dt><dd class="display">15%</dd><p>One amount across up to twelve coins.</p></div>
+      </dl>
+      <p class="price-note">The fee is on the review screen before you confirm, and it leaves as its own transfer you can look up.</p>
+    </div>
+  </section>
+
+  <section class="ext-teaser" id="browser">
+    <div class="wrap">
+      <a class="teaser" href="/download.html#extension">
+        <div>
+          <h2>Astrala in your browser</h2>
+          <p>A Chrome extension. With the app, it is a remote for the app. Without the app, it can be a wallet on its own (beta), so you can use Astrala on Windows and Linux today.</p>
+        </div>
+        <span class="teaser-go">Get the extension <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </section>
+
+  <section class="end">
+    <div class="wrap">
+      <h2 class="display">Check the code and the download</h2>
+      <p>The code that handles keys, money and network traffic is public, and each release has a SHA-256 checksum you can compare before opening it. The app sends no analytics.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold btn-lg" href="/download.html">Download for Mac</a>
+        <a class="link" href="/download.html#verify">Verify a download</a>
+        <a class="link" href="/faq.html">Questions</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer data-footer></footer>
+</body>
+</html>
